@@ -4,22 +4,16 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 /* 6. 중복 문자 제거 */
-public class section1_6 {
+public class section1_6_pro {
 
     public String solution(String str) {
 
         String answer = "";
 
-        ArrayList<Character> set = new ArrayList<>();
-
-        for (char x : str.toCharArray()) {
-            if(!set.contains(x)){
-                set.add(x);
+        for (int i = 0; i < str.length(); i++) {
+            if (str.indexOf(str.charAt(i)) == i) {
+                answer += str.charAt(i);
             }
-        }
-
-        for (char x : set) {
-            answer += x;
         }
 
         return answer;
@@ -30,7 +24,7 @@ public class section1_6 {
         Scanner scan = new Scanner(System.in);
         String str = scan.next();
 
-        section1_6 T = new section1_6();
+        section1_6_pro T = new section1_6_pro();
         System.out.println(T.solution(str));
 
     }
