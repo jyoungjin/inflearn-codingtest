@@ -16,6 +16,7 @@ public class section1_7_pro {
                 return "NO";
             }
         }
+        System.out.println("");
         return answer;
     }
 
