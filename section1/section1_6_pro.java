@@ -3,7 +3,7 @@ package section1;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-/* 6. 중복 문자 제거 */
+/* 6. 중복 문자 제거 - 강의 ver */
 public class section1_6_pro {
 
     public String solution(String str) {

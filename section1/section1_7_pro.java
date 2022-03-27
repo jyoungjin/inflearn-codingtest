@@ -2,7 +2,7 @@ package section1;
 
 import java.util.Scanner;
 
-/* 7. 회문 문자열 */
+/* 7. 회문 문자열 - 강의 ver */
 public class section1_7_pro {
 
     public String solution(String str) {

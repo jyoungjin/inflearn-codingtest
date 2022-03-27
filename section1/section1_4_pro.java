@@ -2,7 +2,7 @@ package section1;
 
 import java.util.*;
 
-/* 4. 단어 뒤집기 */
+/* 4. 단어 뒤집기 - 강의 ver */
 public class section1_4_pro {
 
     public ArrayList<String> solution(String[] arr) {

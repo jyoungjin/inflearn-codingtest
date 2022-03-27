@@ -2,7 +2,7 @@ package section1;
 
 import java.util.Scanner;
 
-/* 9. 숫자만 추출 */
+/* 9. 숫자만 추출 - 강의 ver */
 public class section1_9_pro {
 
     public int solution(String str) {

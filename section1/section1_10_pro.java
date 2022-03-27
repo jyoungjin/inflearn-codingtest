@@ -3,7 +3,7 @@ package section1;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-/* 10. 가장 짧은 문자거리 */
+/* 10. 가장 짧은 문자거리 - 강의 ver */
 public class section1_10_pro {
 
     public ArrayList<Integer> solution(String str, char word) {
