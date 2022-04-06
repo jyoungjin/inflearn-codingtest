@@ -1,40 +1,21 @@
 package section2;
 
-import java.util.ArrayList;
 import java.util.Scanner;
 
-/* 6. 뒤집은 소수 */
-public class section2_6 {
+/* 7. 점수계산 */
+public class section2_7 {
 
-    public boolean isSosu(String x) {
-        boolean flag = true;
+    public int solution(int n, int[] arr) {
 
-        int sosu = Integer.valueOf(x);
+        int answer = 0;
+        int val = 1;
 
-        if (sosu < 2) {
-            return false;
-        }
-
-        for (int i = 2; i < sosu/2; i++) {
-            if (sosu % i == 0) {
-                return false;
-            }
-        }
-
-        return flag;
-    }
-
-    public ArrayList<Integer> solution(int n, String[] arr) {
-
-        ArrayList<Integer> answer = new ArrayList<>();
-
-        for (int i = 0; i < arr.length; i++) {
-            arr[i] = new StringBuilder(arr[i]).reverse().toString();
-        }
-
-        for (String x : arr) {
-            if (isSosu(x)) {
-                answer.add(Integer.valueOf(x));
+        for (int x : arr) {
+            if (x == 1) {
+                answer += val;
+                val++;
+            } else {
+                val = 1;
             }
         }
 
@@ -45,16 +26,14 @@ public class section2_6 {
 
         Scanner scan = new Scanner(System.in);
         int n = scan.nextInt();
-        String[] arr = new String[n];
+        int[] arr = new int[n];
 
         for (int i = 0; i < arr.length; i++) {
-            arr[i] = scan.next();
+            arr[i] = scan.nextInt();
         }
 
-        section2_6 T = new section2_6();
-        for (int x : T.solution(n, arr)) {
-            System.out.print(x + " ");
-        }
+        section2_7 T = new section2_7();
+        System.out.print(T.solution(n, arr));
 
     }
 }
