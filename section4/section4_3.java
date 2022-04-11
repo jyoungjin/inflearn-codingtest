@@ -1,15 +1,29 @@
 package section4;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.HashSet;
-import java.util.Scanner;
+import java.util.*;
 
 /* 3. 매출액의 종류 */
 public class section4_3 {
     public ArrayList<Integer> solution(int n, int k, int[] arr) {
 
         ArrayList<Integer> answer = new ArrayList<>();
+
+        HashMap<Integer, Integer> map = new HashMap<>();
+
+        for (int i = 0; i < k ; i++) {
+            map.put(arr[i], map.getOrDefault(arr[i], 0) + 1);
+        }
+        answer.add(map.size());
+
+        for (int i = k; i < n; i++) {
+            map.put(arr[i - k], map.get(arr[i - k]) - 1);
+            if (map.get(arr[i - k]) == 0) {
+                map.remove(arr[i - k]);
+            }
+            map.put(arr[i], map.getOrDefault(arr[i], 0) + 1);
+            answer.add(map.size());
+        }
+
 
         return answer;
     }
