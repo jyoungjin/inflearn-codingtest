@@ -23,7 +23,6 @@ public class section5_5 {
             }
         }
 
-
         return answer;
     }
 
